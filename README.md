@@ -2,4 +2,4 @@
 
 Trained with teachablemachine.withgoogle.com
 
-Live demo at https://koundinyad.github.io/rock-paper-scissor/
+Live demo at https://rock-paper-scissor.brr.cool/
