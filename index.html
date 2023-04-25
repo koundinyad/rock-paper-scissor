@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissor Bot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rock Paper Scissor Bot</h1>
+    <main>
+      <div id="video-container"></div>
+      <div id="container"></div>
+      <div id="boxes"></div>
+    </main>
+    <script>
+      window.onerror = function (error, url, line) {
+        parent.postMessage(
+          ["console", "❌ -- [ERROR] -- ❌ -- ⚠️ " + error],
+          "*"
+        );
+      };
+      var cl = console.log;
+      console.log = function () {
+        var msg = [...arguments].join();
+        parent.postMessage(["console", msg], "*");
+      };
+    </script>
+    <script
+      crossorigin
+      src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
